@@ -1,0 +1,86 @@
+.ExperienceInfo {
+  #outerUl {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-color: lightblue;
+    overflow: scroll;
+    list-style-position: outside;
+
+    li {
+      position: relative;
+      list-style: square;
+      margin-bottom: 100px;
+      width: 90%;
+      margin-left: 5%;
+      font-weight: bolder;
+      color: black;
+      @include alignCenter();
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1.3rem;
+      // background-color: lightgreen;
+
+      > * {
+        position: relative;
+      }
+
+      p {
+        width: 100%;
+        // height: 40px;
+        margin: 10px 0px;
+        @include alignCenter();
+        justify-content: flex-start;
+        // background-color: lightgreen;
+        display: inline-block;
+      }
+
+      ul {
+        // height: 150px;
+        width: 100%;
+        overflow: scroll;
+        list-style: circle inside;
+
+        li {
+          align-items: flex-start;
+          margin: 5px 0px;
+          padding: 0px;
+          height: 30px;
+          display: inline-block;
+          margin-left: 5%;
+        }
+      }
+
+      h2,
+      p {
+        strong {
+          color: var(--GoogleYellow);
+          word-spacing: 5px;
+        }
+      }
+
+      .bulletPoint {
+        position: absolute;
+        top: 20px;
+        left: -30px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--GoogleYellow);
+      }
+    }
+
+    #Title {
+      list-style: none;
+      @include alignCenter();
+      width: 90%;
+      height: 80px;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 2rem;
+        text-decoration: underline var(--GoogleYellow);
+      }
+    }
+  }
+}

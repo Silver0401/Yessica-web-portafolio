@@ -1,0 +1,154 @@
+@keyframes OpAnim1 {
+  0% {
+    opacity: 1;
+  }
+  33%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes OpAnim2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes OpAnim3 {
+  0% {
+    opacity: 0;
+  }
+  66%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.ContactInfo {
+  // background-color: lightblue;
+
+  form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-color: lightgreen;
+    overflow: scroll;
+    @include alignCenter();
+    flex-direction: column;
+    justify-content: space-around;
+
+    div {
+      position: relative;
+      width: 100%;
+      height: 15%;
+      @include alignCenter();
+      // background-color: lightcoral;
+
+      > * {
+        position: absolute;
+        color: black;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        border-radius: 10px;
+      }
+
+      label {
+        z-index: 1;
+        pointer-events: none;
+        @include alignCenter();
+        justify-content: flex-start;
+        padding-left: 2.5%;
+        transition: transform 500ms, background-color 1s;
+        width: 89%;
+        height: 50%;
+        background-color: white;
+      }
+      input,
+      textarea {
+        z-index: 0;
+        width: 90%;
+        height: 60%;
+        background-color: white;
+        @include alignCenter();
+        border: 2px solid var(--GooglePurple);
+        outline: none;
+        padding-left: 2.5%;
+
+        &:valid + label,
+        &:focus + label {
+          transform: translateY(-100%);
+          transition: transform 500ms, background-color 50ms;
+          background-color: transparent;
+        }
+      }
+
+      textarea {
+        padding-top: 1.5%;
+        resize: none;
+      }
+
+      .sendButton {
+        position: relative;
+        width: 150px;
+        height: 60px;
+        border: 2px solid white;
+        overflow: hidden;
+        padding: 0;
+        background-color: var(--GooglePurple);
+        @include alignCenter();
+        transition: background-color 500ms;
+
+        p {
+          position: absolute;
+          font-size: 1.6rem;
+          color: white;
+          transition: color 500ms;
+        }
+
+        &:hover {
+          transition: background-color 500ms;
+          background-color: white;
+
+          p {
+            color: var(--GooglePurple);
+            transition: color 500ms;
+          }
+        }
+      }
+
+      .CustomSpinner {
+        position: relative;
+        cursor: not-allowed;
+        // background-color: lightcoral;
+        width: 100%;
+        height: 100%;
+        @include alignCenter();
+        justify-content: space-evenly;
+        overflow: visible;
+
+        .ball {
+          position: relative;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: black;
+        }
+
+        .b1 {
+          animation: OpAnim1 500ms ease-in infinite;
+        }
+        .b2 {
+          animation: OpAnim2 500ms ease-in infinite;
+        }
+        .b3 {
+          animation: OpAnim3 500ms ease-in infinite;
+        }
+      }
+    }
+  }
+}

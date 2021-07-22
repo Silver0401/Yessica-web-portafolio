@@ -1,0 +1,135 @@
+{
+  "Nav.English": "English",
+  "Nav.Spanish": "Español",
+
+  "Personal.Top.Header": "Bienvenido, soy:",
+
+  "Home.Skills" : "Habilidades",
+  "Home.Contact" : "Contáctame",
+  "Home.Education" : "Educación",
+  "Home.Experience" : "Experiencia",
+  "Home.Languages" : "Idiomas",
+  
+  "Skills.Software" : "Software y Herramientas",
+  "Skills.Languages" : "Lenguajes de Programación",
+  
+  "Education.Title1" : "Trayectoria Escolar",
+  "Education.Institution.Title" : "Institución: ",
+  "Education.Career.Title" : "Nombre de la Carrera: ",
+  "Education.Duration.Title" : "Duración: ",
+
+  "Education.Institution.ITP" : "Instituto Tecnológico de Pachuca",
+  "Education.Institution.ITESM" : "Instituto Tecnológico de Estudios Superiores de Monterrey Campus Hidalgo",
+  "Education.Institution.UTEL" : "Universidad UTEL",
+
+  "Education.Career.ISC" : "Ingeniero en Sistemas Computacionales",
+  "Education.Career.MCC" : "Maestría en Ciencias de la Computación",
+  "Education.Career.MED" : "Maestría en Educación y Docencia",
+
+  "Education.Title2" : "Certificaciones y Otros Estudios",
+  "Education.April" : "Abril del",
+  "Education.June" : "Junio del",
+  "Education.January" : "Enero del",
+  "Education.March" : "Marzo del",
+  "Education.May" : "Mayo del",
+  "Education.November" : "Noviembre del",
+  "Education.December" : "Diciembre del",
+
+  "Education.paragraph1" : "Certificación en el Programa de Habilidades Docentes por competencias",
+  "Education.paragraph2" : "Acreditación en Enseñanza para el aprendizaje Activo",
+  "Education.paragraph3" : "Acreditación en Planeación y Diseño de un Curso",
+  "Education.paragraph4" : "Acreditación en Administración del Proceso de Aprendizaje",
+  "Education.paragraph5" : "Acreditación en Evaluación de los Aprendizajes",
+  "Education.paragraph6" : "Acreditación en Uso de la Tecnología",
+  "Education.paragraph7" : "Acreditación en Trabajo Colegiado",
+  "Education.paragraph8" : "Diplomado en Asesoría y Orientación Educativa",
+  "Education.paragraph9" : "Certificación en Técnica Didáctica de PBL",
+  "Education.paragraph10" : "Certificación en la Técnica Didáctica de POL",
+  "Education.paragraph11" : "Certificación en la Técnica Didáctica de AC",
+  "Education.paragraph12" : "Certificación en la Estrategia Didáctica de Método de Casos",
+  "Education.paragraph13" : "Certificación en Aprendizaje (Servicio)",
+  "Education.paragraph14" : "Certificación de Enseñando con Tecnologíca (Microsoft)",
+  "Education.paragraph15" : "Certificación en Ética Transversal",
+  "Education.paragraph16" : "Certificación de Competencias (PROFORDEMS)",
+  "Education.paragraph17" : "Certificación de Google Level 1",
+  "Education.paragraph18" : "Certificación de Google Innovator",
+  "Education.paragraph19" : "1er al 3er Congreso Internacional de Innovación Educativa",
+  
+  
+  "Experience.Title1" : "Antecedentes Laborales",
+  "Experience.Title2" : "Experiencia Docente",
+  "Experience.Title3" : "Experiencia en Investigación",
+
+  "Experience.Institution.Name.Title" : "Institución o Empresa: ",
+  "Experience.Institution.Position.Title" : "Puesto en la Institución: ",
+  "Experience.Institution.Activities.Title" : "Actividades Desempeñadas: ",
+  "Experience.Institution.Professor.Title" : "Profesor en las Siguientes Materias: ",
+  
+  "Experience.Institution1.Name" : "Escuela Americana de Pachuca",
+  "Experience.Institution1.Position" : "Coordinador del Área de Tecnología",
+  "Experience.Institution1.Activity1" : "Coordinador Académico",
+  "Experience.Institution1.Activity2" : "Atención a Padres",
+  "Experience.Institution1.Activity3" : "Web Master",
+  "Experience.Institution1.Activity4" : "Administración de la Red",
+  "Experience.Institution1.Activity5" : "Desarrollador de Sistemas",
+  "Experience.Institution1.Activity6" : "Asesoría en la compra de equipo",
+  "Experience.Institution1.Activity7" : "Contratación de personal nacional y extranjero",
+  "Experience.Institution1.Activity8" : "Supervisor Técnico",
+  "Experience.Institution1.Activity9" : "Apoyo General en temas tecnológicos",
+
+  "Experience.Institution2.Name" : "Instituto Tecnológico de Estudios Superiores de Monterrey campus Hidalgo",
+  "Experience.Institution2.Position1" : "Coordinador Técnico de la Universidad Virtual",
+  "Experience.Institution2.Position2" : "Coordinador Académico de la Universidad Virtual",
+  "Experience.Institution2.Subject1" : "Programación Básica",
+  "Experience.Institution2.Subject2" : "Redes Sociales y Tecnologiás de la Información",
+  "Experience.Institution2.Subject3" : "Diseño Gráfico y Aplicaciones Digitales",
+  "Experience.Institution2.Subject4" : "Diseño y Desarrollo de Aplicaciones",
+  "Experience.Institution2.Subject5" : "Pensamiento Lógico Computacional",
+  "Experience.Institution2.Subject6" : "Expresión Digital",
+  "Experience.Institution2.Subject7" : "Creatividad y Diseño Digital",
+  "Experience.Institution2.Subject8" : "Desarrollo de Aplicaciones Multimedia",
+  "Experience.Institution2.Subject9" : "Introducción a las Tecnologías de la Información",
+  "Experience.Institution2.Subject10" : "Sistemas Computacionales",
+  "Experience.Institution2.Subject11" : "Fundamentos de Programación",
+  "Experience.Institution2.Subject12" : "Organización Computacional",
+  "Experience.Institution2.Subject13" : "Arquitectura de Computadoras",
+  "Experience.Institution2.Subject14" : "Bases de Datos",
+  "Experience.Institution2.Subject15" : "Introducción a las Tecnologías de la Información",
+  "Experience.Institution2.Investigation1" : "Participante, del proyecto Virtalg (NOVUS 2012)",
+  "Experience.Institution2.Investigation2" : "Líder, del proyecto App Shelf (Líderes Tec 21)",
+  "Experience.Institution2.Investigation3" : "Líder, del proyecto Enjoy English (NOVUS 2015)",
+  "Experience.Institution2.Investigation4" : "Líder, del proyecto VC Trip (NOVUS 2016)",
+
+  "Experience.Institution3.Name" : "Instituto Tecnológico de Pachuca",
+  "Experience.Institution3.Position" : "Administrador de la Red",
+  "Experience.Institution3.Activity1" : "Instalación y Configuración de la Red",
+  "Experience.Institution3.Activity2" : "Administración de Red y servicios DNS",
+  "Experience.Institution3.Activity3" : "Impartición de cursos de Inducción",
+  "Experience.Institution3.Subject1" : "Programación",
+  "Experience.Institution3.Subject2" : "Bases de Datos Distribuidas",
+
+  "Experience.Institution4.Name" : "Instituto Politécnico Nacional",
+  "Experience.Institution4.Investigation" : "Ayudante de investigación, del estudio Arquitectura de Computadoras Reconfigurables.",
+  
+  
+  "Languages.Spanish.Title" : "Español",
+  "Languages.Spanish.Description" : "Gracias a que provengo de México, mi dominio del español es completamente nativo y por ende casi perfecto tanto en el habla como en su gramática.",
+
+  "Languages.English.Title" : "Inglés",
+  "Languages.English.Description" : "He estado practicando Inglés durate los últimos 10 años de mi vida y aunque he mejorado dramaticamente, aun me faltan algunos pasos en mi fluidez y gramática.",
+
+  "Languages.French.Title" : "Francés",
+  "Languages.French.Description" : "El Francés es el tercer y más reciente idioma que he empezado a aprender, y aunque actualmente me encuentro en un nivel básico planeo alcanzar un nivel profesional en este idioma.",
+ 
+ 
+  "Contact.Name" : "Nombre",
+  "Contact.Email" : "Correo",
+  "Contact.Phone" : "Teléfono",
+  "Contact.Message" : "Mensaje",
+  "Contact.Send" : "Enviar",
+
+
+
+
+  "placeholder" : ":u"
+}

@@ -1,0 +1,134 @@
+{
+  "Nav.English": "Inglés",
+  "Nav.Spanish": "Spanish",
+
+  "Personal.Top.Header": "Welcome, I'm:",
+
+  "Home.Skills" : "Skills",
+  "Home.Contact" : "Contact Me",
+  "Home.Education" : "Education",
+  "Home.Experience" : "Experience",
+  "Home.Languages" : "Languages",
+  
+  "Skills.Software" : "Software and Tools",
+  "Skills.Languages" : "Coding Languages",
+  
+  "Education.Title1" : "School Trajectory",
+  "Education.Institution.Title" : "Institution: ",
+  "Education.Career.Title" : "Name of the Collge Career: ",
+  "Education.Duration.Title" : "Duration: ",
+
+  "Education.Institution.ITP" : "Technological Institute of Pachuca",
+  "Education.Institution.ITESM" : "Technological Institue of Higher Studies of Monterrey campus Hidalgo",
+  "Education.Institution.UTEL" : "UTEL University",
+
+  "Education.Career.ISC" : "Computer Systems Engineer",
+  "Education.Career.MCC" : "Masters degree in Computer Science",
+  "Education.Career.MED" : "Masters degree in Education and Teaching",
+
+  "Education.Title2" : "Certifications and Other Studies",
+  "Education.April" : "April of",
+  "Education.June" : "June of",
+  "Education.January" : "January of",
+  "Education.March" : "March of",
+  "Education.May" : "May of",
+  "Education.November" : "November of",
+  "Education.December" : "December of",
+
+  "Education.paragraph1" : "Certification in the Teaching Skills Program by competencies ",
+  "Education.paragraph2" : "Accreditation in Teaching for Active Learning",
+  "Education.paragraph3" : "Accreditation in Course Design and Plinification",
+  "Education.paragraph4" : "Accreditation in Learning Process Administration",
+  "Education.paragraph5" : "Accreditation in Assesment of Learning",
+  "Education.paragraph6" : "Accreditation in Technology Usage",
+  "Education.paragraph7" : "Accreditation in Collegiate Work",
+  "Education.paragraph8" : "Diplomat in Educational Counseling and Guidance",
+  "Education.paragraph9" : "Certification in PBL Didactic Technique",
+  "Education.paragraph10" : "Certification in POL Didactic Technique",
+  "Education.paragraph11" : "Certification in AC Didactic Technique",
+  "Education.paragraph12" : "Certification in Cases Method Didactial Strategy",
+  "Education.paragraph13" : "Certification in Learning (Service)",
+  "Education.paragraph14" : "Certification of Technological Teaching (Microsoft)",
+  "Education.paragraph15" : "Certification in Transversal Ethics",
+  "Education.paragraph16" : "Certification of Competences (PROFORDEMS)",
+  "Education.paragraph17" : "Certification of Google Level 1",
+  "Education.paragraph18" : "Certification of Google Innovator",
+  "Education.paragraph19" : "1st to 3d Congress in 1er al 3er International Congres of Educational Innovation",
+  
+  
+  "Experience.Title1" : "Employment Background",
+  "Experience.Title2" : "Teaching Experience",
+  "Experience.Title3" : "Research Experience",
+
+  "Experience.Institution.Name.Title" : "Institution or Enterprose: ",
+  "Experience.Institution.Position.Title" : "Position in the Institution: ",
+  "Experience.Institution.Activities.Title" : "Activities Performed: ",
+  "Experience.Institution.Professor.Title" : "Professor in the Following Subjects: ",
+  
+  "Experience.Institution1.Name" : "American School of Pachuca",
+  "Experience.Institution1.Position" : "Techonology Area Coordinator",
+  "Experience.Institution1.Activity1" : "Academic Coordinator",
+  "Experience.Institution1.Activity2" : "Attention to Parents",
+  "Experience.Institution1.Activity3" : "Web Master",
+  "Experience.Institution1.Activity4" : "Network Administration",
+  "Experience.Institution1.Activity5" : "Systems Developer",
+  "Experience.Institution1.Activity6" : "Advice on equipment purchase",
+  "Experience.Institution1.Activity7" : "Hiring of national and foreign personnel",
+  "Experience.Institution1.Activity8" : "Technical Supervisor",
+  "Experience.Institution1.Activity9" : "General Support in Technology related Subjects",
+
+  "Experience.Institution2.Name" : "Technological Institue of Higher Studies of Monterrey campus Hidalgo",
+  "Experience.Institution2.Position1" : "Virtual University Technical Coordinator",
+  "Experience.Institution2.Position2" : "Virtual Academic Technical Coordinator",
+  "Experience.Institution2.Subject1" : "Basic Programming",
+  "Experience.Institution2.Subject2" : "Social Networks and Information Technologies",
+  "Experience.Institution2.Subject3" : "Graphic Design and Digital Applications",
+  "Experience.Institution2.Subject4" : "Design and Development of Applications",
+  "Experience.Institution2.Subject5" : "Computational Logical Thinking",
+  "Experience.Institution2.Subject6" : "Digital Expression",
+  "Experience.Institution2.Subject7" : "Creativity and Digital Design",
+  "Experience.Institution2.Subject8" : "Multimedia Applications Development",
+  "Experience.Institution2.Subject9" : "Introduction to Information Technologies",
+  "Experience.Institution2.Subject10" : "Computer Systems",
+  "Experience.Institution2.Subject11" : "Programming Fundamentals",
+  "Experience.Institution2.Subject12" : "Computational Organization",
+  "Experience.Institution2.Subject13" : "Computers Arquitecture",
+  "Experience.Institution2.Subject14" : "Data Bases",
+  "Experience.Institution2.Investigation1" : "Participan of Virtalog Project (NOVUS 2012)",
+  "Experience.Institution2.Investigation2" : "Leader of App Shelf Project (Tec 21 Leaders)",
+  "Experience.Institution2.Investigation3" : "Leader of Enjoy English Project (NOVUS 2015)",
+  "Experience.Institution2.Investigation4" : "Leader of VC Trip Project (NOVUS 2016)",
+
+  "Experience.Institution3.Name" : "Technological Institute of Pachuca",
+  "Experience.Institution3.Position" : "Network Administrator",
+  "Experience.Institution3.Activity1" : "Network Installation and Configuration",
+  "Experience.Institution3.Activity2" : "Network and DNS services Administration",
+  "Experience.Institution3.Activity3" : "Teaching Induction Courses",
+  "Experience.Institution3.Subject1" : "Programming",
+  "Experience.Institution3.Subject2" : "Distributed Data Bases",
+
+  "Experience.Institution4.Name" : "National Polytechnic Institute",
+  "Experience.Institution4.Investigation" : "Research assistant, Reconfigurable Computer Architecture studio.",
+  
+  
+  "Languages.Spanish.Title" : "Spanish",
+  "Languages.Spanish.Description" : "Due to the fact I come from Mexico, my mastery in spanish is native and therefore almost perfect both in speaking and gramatics.",
+
+  "Languages.English.Title" : "English",
+  "Languages.English.Description" : "I have been practicing English for around the past 10 years of my life, and even though I have improved dramatically, I still have a few steps to go in my fluidity and grammar.",
+
+  "Languages.French.Title" : "French",
+  "Languages.French.Description" : "French has been the third and most recent language I've began to learn, even thought I'm currently in a basic level, I plan on achieving a professional level on this language.",
+ 
+ 
+  "Contact.Name" : "Name",
+  "Contact.Email" : "Email",
+  "Contact.Phone" : "Phone",
+  "Contact.Message" : "Message",
+  "Contact.Send" : "Send",
+
+
+
+
+  "placeholder" : ":u"
+}
