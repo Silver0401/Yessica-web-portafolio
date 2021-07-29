@@ -1,0 +1,11 @@
+.ProfileInfo {
+  @include alignCenter();
+
+  p {
+    margin: 0px 5%;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+}

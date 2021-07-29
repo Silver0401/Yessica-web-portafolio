@@ -13,11 +13,11 @@ const Experience: React.FC = () => {
         <li>
           <p>
             <strong>{t("Experience.Institution.Name.Title")} </strong>{" "}
-            {t("Experience.Institutio1.Name")}
+            {t("Experience.Institution1.Name")}
           </p>
           <p>
             <strong>{t("Experience.Institution.Position.Title")} </strong>{" "}
-            {t("Experience.Institutio1.Position")}
+            {t("Experience.Institution1.Position")}
           </p>
           <p>
             <strong>{t("Experience.Institution.Activities.Title")} </strong>

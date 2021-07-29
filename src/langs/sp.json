@@ -2,13 +2,17 @@
   "Nav.English": "English",
   "Nav.Spanish": "Español",
 
-  "Personal.Top.Header": "Bienvenido, soy:",
+  "Personal.Top.Header": "Currículum Vitae",
+  "PersonalProfileParagraph" : "Ingeniero en Sistemas Computacionales, graduada del Instituto Tecnológico de Pachuca y Maestrías en Ciencias Computacionales por ITESM y Educación y Docencia por UTEL. Con experencia en diseño y desarrollo de sistemas, planeación y dirección de diferentes proyectos educativos además de 22 años impartiendo clases y realizando funciones directivas. Dominio de software tanto para educación, ofimática así como diseño, modelado 3D, audio y video. Alta capacidad para integrarse en grupos de trabajo con profesionales de otras ramas, asumiendo responsabilidades individuales y de equipo, Claridad conceptual en estructuración y liderazgo. Excelente manejo de relaciones interpersonales. Habilidad de negociación e interés por laactualización profesional. Me encanta la tecnología e innovación, por lo cual siempre estoy en busca de conocer lo que está a la vanguardia en tecnología, me gusta la investigación y realización de proyectos por ello he participado en Congresos. Soy una gran aficionada del séptimo arte, me encanta el baile y viajar además de conocer la gastronomía de diferentes lugares. Por último, el estudio de varios idiomas como el Frances é Ingles me ha permitido conocer y valorar otras culturas y en consecuencia ampliar mi visión del mundo laboral y personal.",
+  "ReturnButton": "Regresar",
 
   "Home.Skills" : "Habilidades",
   "Home.Contact" : "Contáctame",
   "Home.Education" : "Educación",
   "Home.Experience" : "Experiencia",
   "Home.Languages" : "Idiomas",
+  "Home.Achievements" : "Logros",
+  "Home.Profile" : "Perfil Personal",
   
   "Skills.Software" : "Software y Herramientas",
   "Skills.Languages" : "Lenguajes de Programación",
@@ -120,15 +124,39 @@
 
   "Languages.French.Title" : "Francés",
   "Languages.French.Description" : "El Francés es el tercer y más reciente idioma que he empezado a aprender, y aunque actualmente me encuentro en un nivel básico planeo alcanzar un nivel profesional en este idioma.",
- 
+  
+  
+  "Achievements.Line1.1" : "En 2015 fui galardonada por PowToon como la ",
+  "Achievements.Line1.2" : "profesora más creativa del año.",
+  "Achievements.Line2.1" : "Durante ",
+  "Achievements.Line2.2" : "tres años consecutivos ",
+  "Achievements.Line2.3" : "he sido reconocida por EduTools Tec por mi participación ",
+  "Achievements.Line2.4" : "compartiendo experiencias en el uso de tecnologías educativas.",
+  "Achievements.Line3.1" : "He participado en la ",
+  "Achievements.Line3.2" : "elaboración de planes de estudio ",
+  "Achievements.Line3.3" : "de preparatoria del nuevo Modelo Tec 21 del ITESM en las materias de: ",
+  "Achievements.Line3.4" : "- Creatividad",
+  "Achievements.Line3.5" : "- Diseño digital",
+  "Achievements.Line3.6" : "- Expresión digital",
+  "Achievements.Line3.7" : "- Pensamiento Lógico Computacional",
+  "Achievements.Line3.8" : "- Diseño y Desarrollo de Aplicaciones",
+  "Achievements.Line4.1" : "Cuento con los siguientes distintivos",
+  "Achievements.Line4.2" : "- Microsoft enseñando con Tecnología",
+  "Achievements.Line4.3" : "- Apple Teacher",
+  "Achievements.Line4.4" : "- Google Teacher",
+  "Achievements.Line4.5" : "- Google Innovator",
+  "Achievements.Line4.6" : "- Google Mentor",
+  "Achievements.Line5.1" : "Gracias a que soy un Google Mentor, he sído lider de proyectos de Innovación en diferentes áreas, ",
+  "Achievements.Line5.2" : "donde se crearon aplicaciones como Enjoy English y VC Trip.",
+  "Achievements.Line5.3" : "Pertenezco al selecto 'Grupo de Educadores de Google' en Pachuca, ",
+  "Achievements.Line5.4" : "donde se comparten ideas y brindan capacitaciones a toda persona que esté interesada.",
+  
  
   "Contact.Name" : "Nombre",
   "Contact.Email" : "Correo",
   "Contact.Phone" : "Teléfono",
   "Contact.Message" : "Mensaje",
   "Contact.Send" : "Enviar",
-
-
 
 
   "placeholder" : ":u"

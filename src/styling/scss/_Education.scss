@@ -1,11 +1,15 @@
 .EducationInfo {
   // background-color: lightcoral;
+
+  overflow: visible;
+
   ul {
     position: absolute;
     width: 100%;
     height: 100%;
     // background-color: lightblue;
-    overflow: scroll;
+    overflow-x: visible;
+    overflow-y: scroll;
     list-style-position: outside;
 
     li {
@@ -14,14 +18,27 @@
       margin: 10px 0px;
       width: 90%;
       height: 80px;
-      margin-left: 5%;
+      margin-left: clamp(0%, 10vw, 5%);
       font-weight: bolder;
       color: black;
       // background-color: lightcoral;
       @include alignCenter();
       flex-direction: column;
       align-items: flex-start;
-      font-size: 1.3rem;
+      font-size: clamp(0.8rem, 2vw, 1.3rem);
+      overflow: visible;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: -5%;
+        top: 30px;
+        background-color: var(--GoogleGreen);
+        border: 1px solid black;
+        border-radius: 50%;
+        width: clamp(6px, 2vw, 10px);
+        height: clamp(6px, 2vw, 10px);
+      }
 
       p {
         // background-color: lightblue;
@@ -34,11 +51,13 @@
 
       #Date {
         position: absolute;
-        right: 0%;
+        right: -5%;
         // background-color: lightgreen;
-        width: 100px;
+        border: 1px solid lightgreen;
+        border-radius: 5px;
+        width: clamp(45px, 10vw, 100px);
         height: 100%;
-        font-size: 0.9rem;
+        font-size: clamp(0.6rem, 2vw, 0.9rem);
         @include alignCenter();
         padding: 5%;
         margin-right: 0;
@@ -48,10 +67,14 @@
     #ulTitle {
       list-style: none;
       @include alignCenter();
-      margin: 30px;
+      margin: clamp(10px, 3vw, 30px);
+      &::before {
+        display: none;
+      }
 
       h2 {
-        font-size: 2rem;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        text-align: center;
         text-decoration: underline var(--GoogleGreen);
       }
     }

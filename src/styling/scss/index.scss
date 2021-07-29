@@ -9,15 +9,19 @@
 @import "./Contact";
 @import "./Skills";
 @import "./Languages";
+@import "./Achievements";
+@import "./Profile";
 
 :root {
   --WhiteBgColor: #e8e7e7;
   --BlackBgColor: #151414;
-  --GoogleRed: hsla(5, 80%, 56%, 0.9);
+  --GoogleRed: hsla(5, 80%, 56%, 0.902);
   --GoogleYellow: hsl(42, 93%, 58%, 0.9);
   --GoogleGreen: hsl(123, 36%, 48%, 0.9);
   --GoogleBlue: hsl(217, 89%, 61%, 0.9);
   --GooglePurple: hsla(253, 84%, 67%, 0.9);
+  --GooglePink: hsla(297, 85%, 67%, 0.9);
+  --CurrentSectionColor: black;
 }
 
 @keyframes ZRotateRight {
@@ -208,7 +212,6 @@
     transform: rotate(360deg);
   }
 }
-
 @keyframes spin2 {
   0% {
     transform: rotate(0deg);
@@ -238,7 +241,6 @@
     transform: rotate(-360deg);
   }
 }
-
 @keyframes spin3 {
   0% {
     transform: rotate(0deg);
@@ -271,7 +273,6 @@
     transform: rotate(360deg);
   }
 }
-
 @keyframes spin4 {
   0% {
     transform: rotate(0deg);
@@ -290,6 +291,17 @@
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    // height: 0px;
+    opacity: 0;
+  }
+  100% {
+    // height: 10px;
+    opacity: 1;
   }
 }
 
@@ -345,6 +357,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  max-width: 1440px;
   overflow: hidden;
   background: linear-gradient(
       to top right,
@@ -361,13 +374,13 @@ body {
     "S S S S P P P E E E E"
     "S S S S P P P E E E E"
     "S S S S P P P E E E E"
-    ". . . . P P P . . . ."
-    ". . . . P P P X X X X"
-    ". . . . P P P X X X X"
-    "C C C C P P P X X X X"
-    "C C C C . L L L L L L"
-    "C C C C . L L L L L L"
-    "C C C C . L L L L L L";
+    "A A A A P P P X X X X"
+    "A A A A P P P X X X X"
+    "A A A A P P P X X X X"
+    "A A A A P P P X X X X"
+    "C C C C C C L L L L L"
+    "C C C C C C L L L L L"
+    "C C C C C C L L L L L";
 
   .Superficial {
     position: absolute;
@@ -434,6 +447,7 @@ body {
       .outerBar {
         position: absolute;
         height: 40px;
+        // width: #{"min(80%,350px)"};
         width: 69%;
         border-radius: 20px;
 
@@ -441,21 +455,30 @@ body {
           position: absolute;
           background-color: white;
           height: 5px;
-          width: 35%;
+          width: 80%;
           top: 50%;
-          left: 10%;
+          left: 5%;
           transform: (-50%, -50%);
           border-radius: 10px;
           transition: transform 500ms;
           transform: scaleX(0%);
           transform-origin: left;
+          z-index: 0;
         }
 
         h1 {
           position: absolute;
-          height: 100%;
+          height: 80%;
           left: 10%;
+          top: 50%;
+          transform: translate(-0%, -50%);
+          padding: 0px 20px;
+          border-radius: 20px;
+          color: black;
+          background-color: transparent;
+          transition: background-color 500ms, color 500ms;
           @include alignCenter();
+          z-index: 1;
         }
       }
     }
@@ -497,9 +520,15 @@ body {
         transition: transform 500ms;
         transition-delay: 500ms;
       }
+
+      .titleContainer .outerBar h1 {
+        background-color: white;
+        transition: background-color 500ms, color 500ms;
+        transition-delay: 500ms;
+      }
       .InitBox .animBox {
         transition: background-color 500ms;
-        transition-delay: 500ms;
+        transition-delay: 700ms;
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(2px);
       }
@@ -510,6 +539,7 @@ body {
     grid-area: P;
     z-index: 1;
     flex-direction: column;
+    z-index: 10;
 
     .TextBox,
     .imgBox {
@@ -537,6 +567,7 @@ body {
         > * {
           font-weight: bolder;
           color: white;
+          text-align: center;
         }
 
         h2 {
@@ -576,17 +607,20 @@ body {
     .imgBox {
       position: relative;
       z-index: 1;
-      overflow: visible;
+      overflow: hidden;
+      // background-color: rgba(255, 255, 255, 0.5);
+      // backdrop-filter: blur(2px);
+      border-radius: 50%;
 
       .personalImgContainer {
         position: relative;
         z-index: 1;
-        box-shadow: inset 0px 0px 10px var(--WhiteBgColor),
-          5px 0px 5px var(--GoogleBlue), -5px 0px 5px var(--GoogleGreen),
-          0px 5px 5px var(--GoogleYellow), 0px -5px 5px var(--GoogleRed);
+        // box-shadow: inset 0px 0px 10px var(--WhiteBgColor),
+        //   5px 0px 5px var(--GoogleBlue), -5px 0px 5px var(--GoogleGreen),
+        //   0px 5px 5px var(--GoogleYellow), 0px -5px 5px var(--GoogleRed);
         border-radius: 50%;
-        width: 280px;
-        height: 280px;
+        width: clamp(220px, 18vw, 250px);
+        height: clamp(220px, 18vw, 250px);
         background-image: url("./../../resources/YessicaImg.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -618,9 +652,6 @@ body {
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.6);
             @include alignCenter();
-            transform: translateY(200%);
-            transition: transform 500ms;
-            transition-timing-function: ease-in-out;
             cursor: pointer;
 
             svg,
@@ -652,12 +683,36 @@ body {
           }
         }
 
+        .profileContainer {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.6);
+          @include alignCenter();
+          cursor: pointer;
+          pointer-events: none;
+          transition: transform 500ms;
+
+          svg {
+            width: 60%;
+            height: 60%;
+          }
+        }
+
         &:hover {
           .socialContainer {
             span {
               transition: transform 500ms;
               transform: translateY(0%);
             }
+          }
+          .profileContainer {
+            transform: translate(-20%, 20%);
+            transition: transform 500ms;
+            pointer-events: all;
           }
         }
       }
@@ -668,8 +723,8 @@ body {
         border: 1px solid white;
         background-color: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(2px);
-        width: 280px;
-        height: 280px;
+        width: clamp(240px, 20vw, 280px);
+        height: clamp(240px, 20vw, 280px);
         @include alignCenter();
 
         svg {
@@ -755,6 +810,19 @@ body {
             transform-box: fill-box;
           }
         }
+        #PersonalSvg {
+          width: 60%;
+          height: 60%;
+        }
+        #AchievementsSvg {
+          #Component11 {
+            #spark1,
+            #spark2,
+            #spark3 {
+              animation: blink 3s linear infinite;
+            }
+          }
+        }
       }
     }
   }
@@ -771,7 +839,7 @@ body {
 
       .centerBar {
         right: 13%;
-        bottom: 10px;
+        bottom: 5px;
       }
       .outerBar {
         left: 6%;
@@ -779,7 +847,7 @@ body {
 
         .innerLine2 {
           top: 50%;
-          width: 38%;
+          // width: 38%;
           left: auto;
           right: 10%;
           transform: (-50%, -50%);
@@ -805,8 +873,9 @@ body {
   }
   .Contact {
     grid-area: C;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
+
     .titleContainer {
       .centerBar,
       .outerBar {
@@ -821,11 +890,12 @@ body {
       .outerBar {
         left: 6%;
         bottom: 10%;
+        width: 75%;
 
         .innerLine2 {
           top: 50%;
           left: auto;
-          width: 30%;
+          // width: 50%;
           right: 10%;
           transform: (-50%, -50%);
           transform-origin: right;
@@ -915,8 +985,9 @@ body {
       }
       .centerBar {
         left: 13%;
-        bottom: 13%;
-        transform: rotate(50deg);
+        bottom: 20%;
+        transform: rotate(40deg);
+        height: 75%;
       }
       .outerBar {
         right: 6%;
@@ -983,7 +1054,7 @@ body {
           top: 50%;
           left: 5%;
           transform: (-50%, -50%);
-          width: 55%;
+          // width: 55%;
         }
       }
     }
@@ -1002,6 +1073,47 @@ body {
       }
     }
   }
+  .Achievements {
+    grid-area: A;
+    .titleContainer {
+      .centerBar,
+      .outerBar {
+        background-color: var(--GooglePink);
+      }
+
+      .centerBar {
+        right: 14%;
+        bottom: 10px;
+        height: 60%;
+        transform: rotate(230deg);
+      }
+      .outerBar {
+        left: 6%;
+        bottom: 10%;
+
+        .innerLine2 {
+          top: 50%;
+          // width: 30%;
+          left: auto;
+          right: 10%;
+          transform: (-50%, -50%);
+          transform-origin: right;
+        }
+      }
+    }
+
+    .animBox {
+      svg {
+        #Component11 {
+          #spark1,
+          #spark2,
+          #spark3 {
+            animation: blink 3s linear infinite;
+          }
+        }
+      }
+    }
+  }
 
   .Loader {
     position: fixed;
@@ -1009,7 +1121,7 @@ body {
     left: 0%;
     width: 100vw;
     height: 100vh;
-    background-color: var(--WhiteBgColor);
+    background-color: black;
     @include alignCenter();
     overflow: hidden;
     z-index: 10;
@@ -1024,7 +1136,7 @@ body {
       h1 {
         position: relative;
         font-size: 2em;
-        color: black;
+        color: white;
         font-weight: bolder;
         letter-spacing: 5px;
         @include alignCenter();
@@ -1085,16 +1197,15 @@ body {
       right: 5%;
       width: 90%;
       height: 100%;
-      background-color: grey;
+      background-color: var(--BlackBgColor);
       transform: translateX(120%);
     }
   }
   .AnimationContainer {
-    position: absolute;
+    position: fixed;
     z-index: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
     @include alignCenter();
     justify-content: space-between;
 
@@ -1106,7 +1217,7 @@ body {
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 20px;
       backdrop-filter: blur(2px);
-      border: 1px solid black;
+      border: 2px solid black;
       // @include alignCenter();
 
       .infoBox {
@@ -1115,33 +1226,49 @@ body {
         height: 100%;
         @include alignCenter();
         z-index: 0;
+        overflow: visible;
 
         section {
           position: absolute;
           width: 90%;
           height: 90%;
           opacity: 1;
+          overflow: visible;
         }
       }
 
       #FixedButton {
         position: absolute;
         z-index: 1;
-        top: 25px;
-        right: 25px;
-        width: 150px;
-        height: 60px;
-        background-color: rgba(0, 0, 0, 0.9);
+        top: 3%;
+        right: 3%;
+        width: clamp(50px, 8vw, 80px);
+        height: clamp(50px, 8vw, 80px);
+        background-color: var(--CurrentSectionColor);
+        border: 2px solid white;
         font-size: 1.5rem;
         font-weight: bolder;
-        color: white;
-        border-radius: 10px;
-        transition: color 500ms, background-color 500ms;
+        border-radius: 50%;
+        @include alignCenter();
+        transition: border 500ms, background-color 500ms;
+
+        svg {
+          width: 60%;
+          height: 60%;
+          fill: white;
+          transition: transform 500ms, fill 500ms;
+        }
 
         &:hover {
-          background-color: rgba(255, 255, 255, 0.9);
-          color: black;
-          transition: color 500ms, background-color 500ms;
+          background-color: white;
+          border: 2px solid var(--CurrentSectionColor);
+          transition: border 500ms, background-color 500ms;
+
+          svg {
+            transform: rotateZ(-360deg);
+            transition: transform 500ms, fill 500ms;
+            fill: var(--CurrentSectionColor);
+          }
         }
       }
     }
@@ -1162,7 +1289,7 @@ body {
 
     > * {
       position: absolute;
-      width: 100%;
+      width: 200%;
       height: 1px;
       background-color: var(--WhiteBgColor);
       opacity: 0.2;
@@ -1184,12 +1311,34 @@ body {
       transform: rotate(90deg);
     }
     .line5 {
-      right: 30%;
+      right: -20%;
       transform: rotate(90deg);
     }
     .line6 {
-      left: 30%;
+      left: -20%;
       transform: rotate(90deg);
     }
   }
 }
+
+@media (hover) {
+  .App {
+    .Personal {
+      .imgBox {
+        .personalImgContainer {
+          .socialContainer span {
+            transform: translateY(200%);
+            transition: transform 500ms;
+            transition-timing-function: ease-in-out;
+          }
+
+          .profileContainer {
+            transform: translate(50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./MobileOpt";

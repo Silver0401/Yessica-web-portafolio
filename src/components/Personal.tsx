@@ -8,7 +8,11 @@ import TwitSvg from "./../resources/Twit.svg";
 import { PersonalProps, LangTypes } from "./../types";
 import { useTranslation } from "react-i18next";
 
-const Personal: React.FC<PersonalProps> = ({ sectionSelected }) => {
+const Personal: React.FC<PersonalProps> = ({
+  sectionSelected,
+  setSection,
+  personalRef,
+}) => {
   const [t, i18n] = useTranslation();
   const [lang, setLang] = useState<LangTypes>("sp");
 
@@ -17,7 +21,7 @@ const Personal: React.FC<PersonalProps> = ({ sectionSelected }) => {
   }, [lang]);
 
   return (
-    <section className="Personal">
+    <section className="Personal" ref={personalRef}>
       <div className="TextBox">
         <div className="lang">
           <select
@@ -34,21 +38,32 @@ const Personal: React.FC<PersonalProps> = ({ sectionSelected }) => {
           <h2 id="TitleHText">Contreras Fuentes</h2>
           <h4 className="PolyTitle">
             {sectionSelected === "Education"
-              ? "Education"
+              ? t("Home.Education")
               : sectionSelected === "Contact"
-              ? "Contact"
+              ? t("Home.Contact")
               : sectionSelected === "Experience"
-              ? "Experience"
+              ? t("Home.Experience")
               : sectionSelected === "Langs"
-              ? "Languages"
+              ? t("Home.Languages")
               : sectionSelected === "Skills"
-              ? "Skills"
+              ? t("Home.Skills")
+              : sectionSelected === "Achievements"
+              ? t("Home.Achievements")
+              : sectionSelected === "Personal"
+              ? t("Home.Profile")
               : ""}
           </h4>
         </div>
       </div>
       <div className="imgBox">
-        <div className="personalImgContainer">
+        <div
+          className="personalImgContainer"
+          style={
+            sectionSelected === "Initial" || sectionSelected === "ExitSections"
+              ? { pointerEvents: "all" }
+              : { pointerEvents: "none" }
+          }
+        >
           <div className="socialContainer">
             <span id="Insta">
               <img src={InstaSvg} alt="InstaSvg" />
@@ -62,6 +77,21 @@ const Personal: React.FC<PersonalProps> = ({ sectionSelected }) => {
             <span id="Twitter">
               <img src={TwitSvg} alt="TwitterSvg" />
             </span>
+          </div>
+          <div
+            className="profileContainer"
+            onClick={() => {
+              setSection("Personal");
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z" />
+            </svg>
           </div>
         </div>
         <div className="svgsContainer">
@@ -689,6 +719,95 @@ const Personal: React.FC<PersonalProps> = ({ sectionSelected }) => {
                 />
               </g>
             </g>
+          </svg>
+          {/* ------------------- */}
+          <svg
+            style={
+              sectionSelected === "Achievements"
+                ? {
+                    opacity: 1,
+                    transition: "opacity 900ms",
+                    transitionDelay: "1.2s",
+                  }
+                : { opacity: 0, transition: "opacity 500ms" }
+            }
+            id="AchievementsSvg"
+            width="238"
+            height="295"
+            viewBox="0 0 238 295"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Component11">
+              <g id="Frame" clipPath="url(#clip0)">
+                <path
+                  id="Vector"
+                  d="M49.5833 64C49.5833 158.354 100.208 180.01 105.156 218H132.973C137.901 180.01 188.417 158.354 188.417 64H49.5833ZM119.059 204.718C115.013 195.112 109.45 185.862 103.709 176.295C89.607 152.829 73.8494 126.611 70.2001 83.25H167.8C164.151 126.62 148.433 152.839 134.361 176.314C128.639 185.872 123.096 195.121 119.059 204.718V204.718ZM119 175.14C107.844 150.471 100.664 121.25 100.585 92.875H86.87C90.5788 122.886 105.285 160.471 119 175.14V175.14ZM238 83.25C234.311 122.761 210.154 161.126 169.843 174.091C172.788 168.778 175.753 163.07 178.589 156.929C207.496 142.29 218.623 116.023 222.857 96.7635H196.201C196.786 92.4323 197.223 87.8893 197.58 83.2404H238V83.25ZM0 83.25C3.689 122.761 27.846 161.126 68.1573 174.091C65.212 168.778 62.2469 163.07 59.4108 156.929C30.5037 142.29 19.3772 116.023 15.1427 96.7635H41.7988C41.2236 92.4419 40.7873 87.8893 40.4303 83.25H0V83.25ZM133.26 227.625H104.839C102.836 239.05 88.6748 252.833 69.4266 252.833V295H168.593V252.833C148.77 252.833 135.164 239.05 133.26 227.625ZM158.667 285.375H79.3333V266.125H158.667V285.375Z"
+                  fill="#ED72D9"
+                  fillOpacity="0.75"
+                />
+              </g>
+              <rect
+                id="spark1"
+                x="28.4075"
+                y="7.00002"
+                width="43.1017"
+                height="14"
+                transform="rotate(54.5691 28.4075 7.00002)"
+                fill="white"
+                fillOpacity="0.75"
+              />
+              <rect
+                id="spark2"
+                x="126.389"
+                y="0.126419"
+                width="43.1017"
+                height="14"
+                transform="rotate(90.5174 126.389 0.126419)"
+                fill="white"
+                fillOpacity="0.75"
+              />
+              <rect
+                id="spark3"
+                x="214.874"
+                y="12.9053"
+                width="43.1017"
+                height="14"
+                transform="rotate(114.949 214.874 12.9053)"
+                fill="white"
+                fillOpacity="0.75"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect
+                  width="238"
+                  height="231"
+                  fill="white"
+                  transform="translate(0 64)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          {/* ------------------- */}
+          <svg
+            style={
+              sectionSelected === "Personal"
+                ? {
+                    opacity: 1,
+                    transition: "opacity 900ms",
+                    transitionDelay: "1.2s",
+                  }
+                : { opacity: 0, transition: "opacity 500ms" }
+            }
+            id="PersonalSvg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="white"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z" />
           </svg>
         </div>
       </div>

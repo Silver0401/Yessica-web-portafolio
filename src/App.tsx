@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import anime from "animejs";
 import { Sections, SvgTypes } from "./types";
 import { ToastContainer } from "react-toastify";
@@ -12,6 +12,8 @@ import AnimationBoxesComponent from "./components/AnimationBoxes";
 const App: React.FC = () => {
   const [sectionSelected, setSectionSelected] = useState<Sections>("Initial");
   const { t } = useTranslation();
+  const PersonalRef = useRef<HTMLTableSectionElement>(null);
+  const root = document.documentElement;
 
   // Loader Animation
   useEffect(() => {
@@ -61,6 +63,27 @@ const App: React.FC = () => {
   // Section Selection Animation
   useEffect(() => {
     console.log(sectionSelected);
+    const colorOptions = {
+      Skills: "#e94435e6",
+      Contact: "#8364f2e6",
+      Education: "#4ea653e6",
+      Experience: "#f8bc30e6",
+      Langs: "#4387f4e6",
+      Achievements: "#eb63f2e6",
+      Personal: "black",
+      Initial: "black",
+      ExitSections: "black",
+    };
+
+    root.style.setProperty(
+      "--CurrentSectionColor",
+      colorOptions[sectionSelected]
+    );
+
+    PersonalRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
     if (sectionSelected === "ExitSections" || sectionSelected === "Initial") {
       const tl2 = anime.timeline({
@@ -94,15 +117,7 @@ const App: React.FC = () => {
 
       tl2.add(
         {
-          targets: [
-            ".Skills",
-            ".Contact",
-            ".Education",
-            ".Experience",
-            ".Langs",
-            "#TitleHText",
-            ".personalImgContainer",
-          ],
+          targets: [".Superficial", "#TitleHText", ".personalImgContainer"],
           opacity: 1,
         },
         "-=350"
@@ -114,15 +129,7 @@ const App: React.FC = () => {
       });
 
       tl.add({
-        targets: [
-          ".Skills",
-          ".Contact",
-          ".Education",
-          ".Experience",
-          ".Langs",
-          "#TitleHText",
-          ".personalImgContainer",
-        ],
+        targets: [".Superficial", "#TitleHText", ".personalImgContainer"],
         opacity: [1, 0],
       });
 
@@ -151,7 +158,11 @@ const App: React.FC = () => {
         "-=1000"
       );
 
-      if (sectionSelected === "Skills" || sectionSelected === "Contact") {
+      if (
+        sectionSelected === "Skills" ||
+        sectionSelected === "Contact" ||
+        sectionSelected === "Achievements"
+      ) {
         tl.add({
           targets: ".Personal",
           translateX: "120%",
@@ -742,6 +753,66 @@ const App: React.FC = () => {
           </g>
         </svg>
       ),
+      trophy: (
+        <svg
+          width="238"
+          height="295"
+          viewBox="0 0 238 295"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="Component11">
+            <g id="Frame" clipPath="url(#clip0)">
+              <path
+                id="Vector"
+                d="M49.5833 64C49.5833 158.354 100.208 180.01 105.156 218H132.973C137.901 180.01 188.417 158.354 188.417 64H49.5833ZM119.059 204.718C115.013 195.112 109.45 185.862 103.709 176.295C89.607 152.829 73.8494 126.611 70.2001 83.25H167.8C164.151 126.62 148.433 152.839 134.361 176.314C128.639 185.872 123.096 195.121 119.059 204.718V204.718ZM119 175.14C107.844 150.471 100.664 121.25 100.585 92.875H86.87C90.5788 122.886 105.285 160.471 119 175.14V175.14ZM238 83.25C234.311 122.761 210.154 161.126 169.843 174.091C172.788 168.778 175.753 163.07 178.589 156.929C207.496 142.29 218.623 116.023 222.857 96.7635H196.201C196.786 92.4323 197.223 87.8893 197.58 83.2404H238V83.25ZM0 83.25C3.689 122.761 27.846 161.126 68.1573 174.091C65.212 168.778 62.2469 163.07 59.4108 156.929C30.5037 142.29 19.3772 116.023 15.1427 96.7635H41.7988C41.2236 92.4419 40.7873 87.8893 40.4303 83.25H0V83.25ZM133.26 227.625H104.839C102.836 239.05 88.6748 252.833 69.4266 252.833V295H168.593V252.833C148.77 252.833 135.164 239.05 133.26 227.625ZM158.667 285.375H79.3333V266.125H158.667V285.375Z"
+                fill="#ED72D9"
+                fillOpacity="0.75"
+              />
+            </g>
+            <rect
+              id="spark1"
+              x="28.4075"
+              y="7.00002"
+              width="43.1017"
+              height="14"
+              transform="rotate(54.5691 28.4075 7.00002)"
+              fill="white"
+              fillOpacity="0.75"
+            />
+            <rect
+              id="spark2"
+              x="126.389"
+              y="0.126419"
+              width="43.1017"
+              height="14"
+              transform="rotate(90.5174 126.389 0.126419)"
+              fill="white"
+              fillOpacity="0.75"
+            />
+            <rect
+              id="spark3"
+              x="214.874"
+              y="12.9053"
+              width="43.1017"
+              height="14"
+              transform="rotate(114.949 214.874 12.9053)"
+              fill="white"
+              fillOpacity="0.75"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect
+                width="238"
+                height="231"
+                fill="white"
+                transform="translate(0 64)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      ),
       lang: (
         <svg
           width="233"
@@ -780,7 +851,11 @@ const App: React.FC = () => {
     return (
       <div
         className={`Superficial ${sectionName}`}
-        onClick={() => setSectionSelected(sectionName)}
+        onClick={() =>
+          sectionSelected === "Initial" || sectionSelected === "ExitSections"
+            ? setSectionSelected(sectionName)
+            : null
+        }
       >
         <div className="titleContainer">
           <div className="centerBar">
@@ -804,21 +879,26 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <PersonalComponent sectionSelected={sectionSelected} />
+      <PersonalComponent
+        sectionSelected={sectionSelected}
+        setSection={(input: Sections) => setSectionSelected(input)}
+        personalRef={PersonalRef}
+      />
 
-      {CreateSection("Skills", `${t("Home.Skills")} ⚙️`, ReturnSvg("screw"))}
-      {CreateSection("Contact", `${t("Home.Contact")} ☎️`, ReturnSvg("phone"))}
-      {CreateSection(
-        "Education",
-        `${t("Home.Education")} 📖`,
-        ReturnSvg("book")
-      )}
+      {CreateSection("Skills", `${t("Home.Skills")}`, ReturnSvg("screw"))}
+      {CreateSection("Education", `${t("Home.Education")}`, ReturnSvg("book"))}
       {CreateSection(
         "Experience",
-        `${t("Home.Experience")} ⏳`,
+        `${t("Home.Experience")}`,
         ReturnSvg("clock")
       )}
-      {CreateSection("Langs", `${t("Home.Languages")} 🌐`, ReturnSvg("lang"))}
+      {CreateSection("Langs", `${t("Home.Languages")}`, ReturnSvg("lang"))}
+      {CreateSection(
+        "Achievements",
+        `${t("Home.Achievements")}`,
+        ReturnSvg("trophy")
+      )}
+      {CreateSection("Contact", `${t("Home.Contact")}`, ReturnSvg("phone"))}
 
       <AnimationBoxesComponent
         sectionSelected={sectionSelected}

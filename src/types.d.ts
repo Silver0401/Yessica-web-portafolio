@@ -1,3 +1,5 @@
+import { RefObject } from "react";
+
 export type Sections =
 | "Initial"
 | "Skills"
@@ -5,6 +7,8 @@ export type Sections =
 | "Education"
 | "Experience"
 | "Langs" 
+| "Achievements" 
+| "Personal" 
 | "ExitSections";
 
 export type SvgTypes = 
@@ -12,6 +16,7 @@ export type SvgTypes =
 "screw" |
 "phone" |
 "lang" |
+"trophy" |
 "clock"
 
 export type LangTypes = "en" | "sp"
@@ -30,7 +35,12 @@ export interface AnimBoxProps {
 }
 
 export interface PersonalProps {
+  setSection: (input: Sections) => any
   sectionSelected: Sections
+	personalRef: RefObject<HTMLTableSectionElement>
 }
+
+
+
 
 
