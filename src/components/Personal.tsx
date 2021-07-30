@@ -65,16 +65,42 @@ const Personal: React.FC<PersonalProps> = ({
           }
         >
           <div className="socialContainer">
-            <span id="Insta">
+            <span
+              id="Insta"
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/yessica.contreras.5015/",
+                  "_newtab"
+                )
+              }
+            >
               <img src={InstaSvg} alt="InstaSvg" />
             </span>
-            <span id="Face">
+            <span
+              id="Face"
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/yessica.contreras.5015",
+                  "_newtab"
+                )
+              }
+            >
               <img src={FaceSvg} alt="FaceSvg" />
             </span>
-            <span id="Whats">
+            <span
+              id="Whats"
+              onClick={() =>
+                window.open("https://wa.me/527712212141", "_newtab")
+              }
+            >
               <img src={WhatsSvg} alt="WhatsSvg" />
             </span>
-            <span id="Twitter">
+            <span
+              id="Twitter"
+              onClick={() =>
+                window.open("https://twitter.com/ycontre", "_newtab")
+              }
+            >
               <img src={TwitSvg} alt="TwitterSvg" />
             </span>
           </div>
