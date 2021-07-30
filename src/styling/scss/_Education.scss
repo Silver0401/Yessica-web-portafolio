@@ -15,13 +15,13 @@
     li {
       list-style: square;
       position: relative;
-      margin: 10px 0px;
+      margin: 20px 0px;
       width: 90%;
-      height: 80px;
+      // height: 80px;
       margin-left: clamp(0%, 10vw, 5%);
       font-weight: bolder;
       color: black;
-      // background-color: lightcoral;
+      // border: 1px solid lightgreen;
       @include alignCenter();
       flex-direction: column;
       align-items: flex-start;
@@ -32,7 +32,7 @@
         position: absolute;
         content: "";
         left: -5%;
-        top: 30px;
+        top: 15%;
         background-color: var(--GoogleGreen);
         border: 1px solid black;
         border-radius: 50%;
@@ -53,13 +53,15 @@
         position: absolute;
         right: -5%;
         // background-color: lightgreen;
-        border: 1px solid lightgreen;
+        border: 1px solid transparent;
+        border-right: 1px solid lightgreen;
+        border-left: 1px solid lightgreen;
         border-radius: 5px;
         width: clamp(45px, 10vw, 100px);
         height: 100%;
         font-size: clamp(0.6rem, 2vw, 0.9rem);
         @include alignCenter();
-        padding: 5%;
+        padding: 2.5%;
         margin-right: 0;
       }
     }
