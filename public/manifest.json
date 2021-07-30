@@ -3,17 +3,17 @@
   "name": "Ismael M.C Personal Web Portaflio",
   "icons": [
     {
-      "src": "IMC-Logo.ico",
+      "src": "YessLogo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "IMC-Logo.png",
+      "src": "YessLogo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "IMC-Logo.png",
+      "src": "YessLogo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
