@@ -420,7 +420,7 @@ body {
           height: 30px;
           border-radius: 50%;
           border: 3px solid white;
-          margin-bottom: 20%;
+          bottom: 10px;
           @include alignCenter();
 
           .innerCircle {
@@ -438,10 +438,18 @@ body {
           width: 5px;
           height: 80%;
           bottom: 10%;
+          // -ms-transform: scaleY(0%);
+          -webkit-transform: scaleY(0%);
+          // -moz-transform: scaleY(0%);
+          // -o-transform: scaleY(0%);
           transform: scaleY(0%);
+
           transition: transform 500ms;
+          // -webkit-transition: transform 500ms;
           transition-delay: 500ms;
+          // -webkit-transition-delay: 500ms;
           transform-origin: bottom;
+          // -webkit-transform-origin: bottom;
         }
       }
       .outerBar {
@@ -513,7 +521,12 @@ body {
     &:hover {
       .titleContainer .centerBar .innerLine1 {
         transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
+        // -ms-transform: scaleY(100%);
+        // -moz-transform: scaleY(100%);
+        // -o-transform: scaleY(100%);
         transition: transform 500ms;
+        // -webkit-transition: -webkit-transform 500ms;
       }
       .titleContainer .outerBar .innerLine2 {
         transform: scaleX(100%);
@@ -849,7 +862,7 @@ body {
           top: 50%;
           // width: 38%;
           left: auto;
-          right: 10%;
+          right: 5%;
           transform: (-50%, -50%);
           transform-origin: right;
         }
@@ -896,7 +909,7 @@ body {
           top: 50%;
           left: auto;
           // width: 50%;
-          right: 10%;
+          right: 2%;
           transform: (-50%, -50%);
           transform-origin: right;
         }
@@ -1036,7 +1049,8 @@ body {
         align-items: flex-start;
 
         .outerCircle {
-          margin-top: 20%;
+          // margin-top: 20%;
+          top: 10px;
         }
         .innerLine1 {
           transform-origin: top;
@@ -1095,7 +1109,7 @@ body {
           top: 50%;
           // width: 30%;
           left: auto;
-          right: 10%;
+          right: 5%;
           transform: (-50%, -50%);
           transform-origin: right;
         }
@@ -1125,17 +1139,18 @@ body {
     @include alignCenter();
     overflow: hidden;
     z-index: 10;
+    // border: 1px solid lightgreen;
 
     .box {
-      width: #{"max(30%,200px)"};
-      height: #{"max(30%,200px)"};
+      width: #{"max(30%,250px)"};
+      height: #{"max(30%,250px)"};
       @include alignCenter();
       flex-direction: column;
       margin-bottom: 50px;
 
       h1 {
         position: relative;
-        font-size: 2em;
+        font-size: clamp(1.5rem, 4vw, 2rem);
         color: white;
         font-weight: bolder;
         letter-spacing: 5px;
@@ -1143,7 +1158,6 @@ body {
         text-align: center;
         width: 100%;
         height: 30%;
-        // border: 1px solid white;
       }
 
       .AnimBox {
@@ -1158,7 +1172,7 @@ body {
         div {
           position: relative;
           width: 80px;
-          height: 30px;
+          height: 20%;
           border-radius: 20px;
           // margin: 0 15px;
         }
@@ -1208,9 +1222,11 @@ body {
     height: 100%;
     @include alignCenter();
     justify-content: space-between;
+    transform-origin: center;
 
     .leftAnimBox,
     .rightAnimBox {
+      transform-origin: center;
       position: absolute;
       width: 60%;
       height: 90%;
@@ -1218,6 +1234,7 @@ body {
       border-radius: 20px;
       backdrop-filter: blur(2px);
       border: 2px solid black;
+      overflow: hidden;
       // @include alignCenter();
 
       .infoBox {

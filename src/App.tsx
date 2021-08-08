@@ -11,9 +11,11 @@ import AnimationBoxesComponent from "./components/AnimationBoxes";
 
 const App: React.FC = () => {
   const [sectionSelected, setSectionSelected] = useState<Sections>("Initial");
+  const [currentBrowser, setCurrentBrowser] = useState<string>();
   const { t } = useTranslation();
   const PersonalRef = useRef<HTMLTableSectionElement>(null);
   const root = document.documentElement;
+  console.log(currentBrowser);
 
   // Loader Animation
   useEffect(() => {
@@ -55,6 +57,30 @@ const App: React.FC = () => {
       );
     }
 
+    function detectBrowser() {
+      if (
+        (navigator.userAgent.indexOf("Opera") ||
+          navigator.userAgent.indexOf("OPR")) !== -1
+      ) {
+        return "Opera";
+      } else if (navigator.userAgent.indexOf("Chrome") !== -1) {
+        return "Chrome";
+      } else if (navigator.userAgent.indexOf("Safari") !== -1) {
+        return "Safari";
+      } else if (navigator.userAgent.indexOf("Firefox") !== -1) {
+        return "Firefox";
+      } else if (
+        navigator.userAgent.indexOf("MSIE") !== -1 ||
+        !!document.DOCUMENT_NODE == true
+      ) {
+        return "IE"; //crap
+      } else {
+        return "Unknown";
+      }
+    }
+
+    setCurrentBrowser(detectBrowser());
+
     setTimeout(() => {
       MoveLoader();
     }, 3000);
@@ -93,7 +119,8 @@ const App: React.FC = () => {
 
       tl2.add({
         targets: ".AnimationContainer",
-        scaleY: ["100%", "0%"],
+        // scaleY: ["100%", "0%"],
+        height: ["90%", "0%"],
         easing: "spring(1, 80, 20, 10)",
       });
 
@@ -145,7 +172,8 @@ const App: React.FC = () => {
         {
           targets: ".AnimationContainer",
           duration: 50,
-          scaleY: "100%",
+          // scaleY: "100%",
+          height: "100%",
         },
         "-=1000"
       );
@@ -153,7 +181,9 @@ const App: React.FC = () => {
         {
           targets: [".leftAnimBox", ".rightAnimBox"],
           duration: 50,
-          scaleY: "0%",
+          // scaleY: "0%",
+          height: "0%",
+          opacity: 0,
         },
         "-=1000"
       );
@@ -171,8 +201,9 @@ const App: React.FC = () => {
         tl.add(
           {
             targets: ".leftAnimBox",
-            opacity: [0.3, 1],
-            scaleY: ["0%", "100%"],
+            opacity: [0, 1],
+            // scaleY: ["0%", "100%"],
+            height: ["0%", "90%"],
             easing: "spring(1, 80, 20, 10)",
           },
           "-=100"
@@ -186,8 +217,9 @@ const App: React.FC = () => {
         tl.add(
           {
             targets: ".rightAnimBox",
-            opacity: [0.3, 1],
-            scaleY: ["0%", "100%"],
+            opacity: [0, 1],
+            height: ["0%", "90%"],
+            // scaleY: ["0%", "100%"],
             easing: "spring(1, 80, 20, 10)",
           },
           "-=100"
@@ -848,33 +880,71 @@ const App: React.FC = () => {
     sectionTitle: string,
     svg: JSX.Element
   ) => {
-    return (
-      <div
-        className={`Superficial ${sectionName}`}
-        onClick={() =>
-          sectionSelected === "Initial" || sectionSelected === "ExitSections"
-            ? setSectionSelected(sectionName)
-            : null
-        }
-      >
-        <div className="titleContainer">
-          <div className="centerBar">
-            <div className="innerLine1" />
-            <div className="outerCircle">
-              <div className="innerCircle" />
+    if (currentBrowser === "Chrome") {
+      return (
+        <div
+          className={`Superficial ${sectionName}`}
+          onClick={() =>
+            sectionSelected === "Initial" || sectionSelected === "ExitSections"
+              ? setSectionSelected(sectionName)
+              : null
+          }
+        >
+          <div className="titleContainer">
+            <div className="centerBar">
+              <div className="innerLine1" />
+              <div className="outerCircle">
+                <div className="innerCircle" />
+              </div>
+            </div>
+            <div className="outerBar">
+              <h1>{sectionTitle}</h1>
+              <div className="innerLine2" />
             </div>
           </div>
-          <div className="outerBar">
-            <h1>{sectionTitle}</h1>
-            <div className="innerLine2" />
+
+          <div className="InitBox">
+            <div className="animBox">{svg}</div>
           </div>
         </div>
+      );
+    } else {
+      return (
+        <div
+          className={`Superficial ${sectionName}`}
+          onClick={() =>
+            sectionSelected === "Initial" || sectionSelected === "ExitSections"
+              ? setSectionSelected(sectionName)
+              : null
+          }
+        >
+          <div className="titleContainer">
+            <div className="centerBar">
+              <div className="innerLine1" />
+              <div className="outerCircle">
+                <div className="innerCircle" />
+              </div>
+            </div>
+            <div className="outerBar">
+              <h1 style={{ backgroundColor: "white" }}>{sectionTitle}</h1>
+              <div className="innerLine2" />
+            </div>
+          </div>
 
-        <div className="InitBox">
-          <div className="animBox">{svg}</div>
+          <div className="InitBox">
+            <div
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                backdropFilter: "blur(2px)",
+              }}
+              className="animBox"
+            >
+              {svg}
+            </div>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   };
 
   return (
